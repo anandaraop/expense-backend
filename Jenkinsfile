@@ -37,6 +37,7 @@ pipeline {
     }
 
     stage('Example1') {
+      when { triggeredBy 'SCMTrigger' }
       steps {
         echo 'Hello World'
       }
