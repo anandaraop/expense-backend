@@ -10,6 +10,7 @@ pipeline {
 
     stage('Lint Code') {
       steps {
+        sh 'env'
         echo 'Lint Code'
       }
     }
@@ -26,7 +27,7 @@ pipeline {
       }
     }
 
-    stage('Sonar Scan') {
+    stage('Sonar Scan Code Review') {
       steps {
         echo 'Sonar Scan'
       }
